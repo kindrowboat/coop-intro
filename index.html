@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co-op System Introduction</title>
+    <style>
+        :root {
+            /* Catppuccin Latte Palette */
+            
+            /* Base Colors */
+            --color-base: #eff1f5;     /* Background */
+            --color-surface0: #e6e9ef; /* Slightly darker surface */
+            --color-surface1: #ccd0da; /* Even darker surface */
+            --color-surface2: #bcc0cc; /* Darkest surface */
+            --color-overlay0: #a6adc8; /* Overlays */
+            --color-overlay1: #9399b2;
+            --color-overlay2: #7f849c;
+            --color-text: #4c4f69;     /* Primary Text */
+            --color-subtext0: #5c5f77;
+            --color-subtext1: #6c6f85;
+            --color-muted: #9399b2;    /* Muted Text */
+            
+            /* Accent Colors */
+            --color-latte-rosewater: #dc8a78;
+            --color-latte-flamingo: #dd7878;
+            --color-latte-pink: #ea76cb;
+            --color-latte-mauve: #8839ef;
+            --color-latte-red: #d20f39;
+            --color-latte-maroon: #e64553;
+            --color-latte-peach: #fe640b;
+            --color-latte-yellow: #df8e1d;
+            --color-latte-green: #40a02b;
+            --color-latte-teal: #179299;
+            --color-latte-blue: #1e66f5;
+            --color-latte-sky: #04a5e5;
+            --color-latte-lavender: #7287fd;
+            
+            /* Borders and Highlights */
+            --color-border: #ccd0da;
+            --color-highlight: #d20f39;
+            
+            /* Shadows */
+            --color-shadow: #00000025;
+            
+            /* Rounding */
+            --border-radius: 8px;
+            
+            /* Font Settings */
+            --font-primary: 'Fira Code', monospace;
+            --font-secondary: 'Inter', sans-serif;
+
+            
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--color-base);
+            color: var(--color-text);
+            
+            margin: 0;
+            padding: 0;
+        }
+        .intro {
+            padding: 20px;
+            text-align: center;
+        }
+        .hero {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .hero img {
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+            border-radius: 50%;
+            border-width: 5px;
+            border-style: solid;
+        }
+
+        .hero {
+            background-color: var(--color-surface0);
+        }
+
+        .hero img#anie-pic {
+            border-color: var(--color-latte-pink);
+        }
+        .hero img#stef-pic {
+            border-color: var(--color-latte-flamingo);
+        }
+        .hero img#tom-pic {
+            border-color: var(--color-latte-green);
+        }
+
+        .description {
+            padding: 20px;
+            text-align: center;
+        }
+        body.tom {
+            background-color: var(--color-latte-green); /* Green */
+        }
+        body.stef {
+            background-color: var(--color-latte-flamingo); /* Salmon */
+        }
+        body.anie {
+            background-color: var(--color-latte-pink); /* Pink */
+        }
+        
+        .alter-info {
+            display: none;
+        }
+        
+        body.tom #tom-info, body.stef #stef-info, body.anie #anie-info {
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <div class="intro">
+            <h1>Welcome to the Co-op System</h1>
+            <p>Meet our alters: Anie, Stef, and Tom.</p>
+        </div>
+        <div class="hero">
+            <img src="anie.jpg" alt="Anie" id="anie-pic" onclick="setAlter('anie')">
+            <img src="stef.jpg" alt="Stef" id="stef-pic" onclick="setAlter('stef')"">
+            <img src="tom.jpg" alt="Tom" id="tom-pic" onclick="setAlter('tom')">
+        </div>
+        <div class="description" id="description">
+            <p>Select an alter to learn more about them.</p>
+            <div id="anie-info" class="alter-info" class="alter-info">
+                <p>Anie is a creative and artistic alter.</p>
+            </div>
+            <div id="stef-info" class="alter-info">
+                <p>Stef is a logical and analytical alter.</p>
+            </div>
+            <div id="tom-info" class="alter-info">
+                <p>Tom is a calm and thoughtful alter.</p>
+            </div>
+        </div>
+    </main>
+    
+    <script>    
+        function setAlter(alter) {
+            document.body.className = alter;
+        }
+    </script>
+</body>
+</html>
