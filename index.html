@@ -37,7 +37,7 @@
             --crust: #dce0e8;
 
             --tom-accent: var(--green);
-            --stef-accent: var(--lavender);
+            --rebecca-accent: var(--lavender);
             --anie-accent: var(--pink);
             --alter-accent: var(--anie-accent);
         }
@@ -72,13 +72,13 @@
             --crust: #232634;
 
             --tom-accent: var(--green);
-            --stef-accent: var(--lavender);
+            --rebecca-accent: var(--lavender);
             --anie-accent: var(--pink);
             --alter-accent: var(--blue);
         }
         
         /* Catppuccin Macchiato */
-        body.macchiato, body.stef {
+        body.macchiato, body.rebecca {
             --rosewater: #f4dbd6;
             --flamingo: #f0c6c6;
             --pink: #f5bde6;
@@ -107,9 +107,9 @@
             --crust: #181926;
             
             --tom-accent: var(--green);
-            --stef-accent: var(--lavender);
+            --rebecca-accent: var(--lavender);
             --anie-accent: var(--pink);
-            --alter-accent: var(--stef-accent);
+            --alter-accent: var(--rebecca-accent);
         }
         
         /* Catppuccin Mocha */
@@ -142,7 +142,7 @@
             --crust: #11111b;
 
             --tom-accent: var(--green);
-            --stef-accent: var(--red);
+            --rebecca-accent: var(--red);
             --anie-accent: var(--pink);
             --alter-accent: var(--tom-accent);
         }        
@@ -162,9 +162,11 @@
         .hero {
             display: flex;
             justify-content: center;
+            flex-direction: row;
             gap: 20px;
             padding: 20px;
         }
+
         .hero .alter-card {
             color: var(--mantle);
             font-weight: bolder;
@@ -174,8 +176,8 @@
             gap: 10px;
         }
         .hero img {
-            width: 150px;
-            height: 150px;
+            width: 20vw;
+            height: 20vw;
             cursor: pointer;
             border-radius: 50%;
             border-width: 10px;
@@ -189,14 +191,14 @@
         .hero img#anie-pic {
             border-color: var(--anie-accent);
         }
-        .hero img#stef-pic {
-            border-color: var(--stef-accent);
+        .hero img#rebecca-pic {
+            border-color: var(--rebecca-accent);
         }
         .hero img#tom-pic {
             border-color: var(--tom-accent);
         }
 
-        body.tom img#tom-pic, body.stef img#stef-pic, body.anie img#anie-pic {
+        body.tom img#tom-pic, body.rebecca img#rebecca-pic, body.anie img#anie-pic {
             border-style: outset;
             border-color: var(--text);
         }
@@ -205,15 +207,15 @@
             opacity: 0.5;
         }
 
-        body.nobody img.alter-pic, body.tom img#tom-pic, body.stef img#stef-pic, body.anie img#anie-pic {
+        body.nobody img.alter-pic, body.tom img#tom-pic, body.rebecca img#rebecca-pic, body.anie img#anie-pic {
             opacity: 1;
         }
 
         body.tom .hero {
             background-color: var(--tom-accent);
         }
-        body.stef .hero {
-            background-color: var(--stef-accent);
+        body.rebecca .hero {
+            background-color: var(--rebecca-accent);
         }
         body.anie .hero {
             background-color: var(--anie-accent);
@@ -233,7 +235,7 @@
             display: none;
         }
         
-        body.tom #tom-info, body.stef #stef-info, body.anie #anie-info, body.nobody #nobody-info {
+        body.tom #tom-info, body.rebecca #rebecca-info, body.anie #anie-info, body.nobody #nobody-info {
             display: block;
         }
 
@@ -257,7 +259,7 @@
     <main>
         <div class="intro">
             <h1>The Kindrobot Cooperative</h1>
-            <p>Hi there! You can call us <strong>kindrobot</strong> online and <strong>Co-op</strong> in person. We are a system of three+. Generally aligned on making spaces that are kind, safe, and a little weird.</p>
+            <p>Hi there! You can call us <strong>kindrobot</strong> online and <strong>Co&#8209;op</strong> or <strong>Stef</strong> in person. We are a system of three+ generally aligned on making spaces that are kind, safe, and a little weird.</p>
             <p>Click on an alter to learn more about them.</p>
         </div>
         <div class="hero">
@@ -266,8 +268,8 @@
                 <span>Anie</span>
             </div>
             <div class="alter-card">
-                <img src="stef.jpg" alt="Stef" id="stef-pic" class="alter-pic" onclick="setAlter('stef')">
-                <span>Stef</span>
+                <img src="rebecca.jpg" alt="Rebecca" id="rebecca-pic" class="alter-pic" onclick="setAlter('rebecca')">
+                <span>Rebecca</span>
             </div>
             <div class="alter-card">
                 <img src="tom.jpg" alt="Tom" id="tom-pic" class="alter-pic" onclick="setAlter('tom')">
@@ -287,8 +289,8 @@
 
                 <p>someday i want to do humanitarian work. i love a good bit</p>
             </div>
-            <div id="stef-info" class="alter-info">
-                <p>Hi hi! I'm Stef (she/they).</p>
+            <div id="rebecca-info" class="alter-info">
+                <p>Hi hi! I'm Rebecca (she/they).</p>
 
                 <p>I'm creative, thoughtful, and motherly.</p>
 
@@ -305,7 +307,7 @@
 
                 <p>I love making and using technology. I'm especially drawn to technology that fosters and empowers community.</p>
 
-                <p>I'm a Marxist, determinist, nerdy hermit.</p>
+                <p>I'm a Marxist, determinist, and nomad.</p>
 
                 <p>But most days, I just happy to get out of the house and maybe teach someone something interesting.</p>
 
