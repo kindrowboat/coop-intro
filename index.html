@@ -8,7 +8,7 @@
     <style>
         
         /* Catppuccin Latte */
-        body.latte, body.anie {
+        body.latte, body.kat {
             --rosewater: #dc8a78;
             --flamingo: #dd7878;
             --pink: #ea76cb;
@@ -38,8 +38,8 @@
 
             --tom-accent: var(--green);
             --rebecca-accent: var(--lavender);
-            --anie-accent: var(--pink);
-            --alter-accent: var(--anie-accent);
+            --kat-accent: var(--pink);
+            --alter-accent: var(--kat-accent);
         }
         
         /* Catppuccin Frappe */ /* Default */
@@ -73,7 +73,7 @@
 
             --tom-accent: var(--green);
             --rebecca-accent: var(--lavender);
-            --anie-accent: var(--pink);
+            --kat-accent: var(--pink);
             --alter-accent: var(--blue);
         }
         
@@ -108,7 +108,7 @@
             
             --tom-accent: var(--green);
             --rebecca-accent: var(--lavender);
-            --anie-accent: var(--pink);
+            --kat-accent: var(--pink);
             --alter-accent: var(--rebecca-accent);
         }
         
@@ -143,7 +143,7 @@
 
             --tom-accent: var(--green);
             --rebecca-accent: var(--red);
-            --anie-accent: var(--pink);
+            --kat-accent: var(--pink);
             --alter-accent: var(--tom-accent);
         }        
         body {
@@ -188,8 +188,8 @@
             background-color: var(--rosewater);
         }
         
-        .hero img#anie-pic {
-            border-color: var(--anie-accent);
+        .hero img#kat-pic {
+            border-color: var(--kat-accent);
         }
         .hero img#rebecca-pic {
             border-color: var(--rebecca-accent);
@@ -198,7 +198,7 @@
             border-color: var(--tom-accent);
         }
 
-        body.tom img#tom-pic, body.rebecca img#rebecca-pic, body.anie img#anie-pic {
+        body.tom img#tom-pic, body.rebecca img#rebecca-pic, body.kat img#kat-pic {
             border-style: outset;
             border-color: var(--text);
         }
@@ -207,7 +207,7 @@
             opacity: 0.5;
         }
 
-        body.nobody img.alter-pic, body.tom img#tom-pic, body.rebecca img#rebecca-pic, body.anie img#anie-pic {
+        body.nobody img.alter-pic, body.tom img#tom-pic, body.rebecca img#rebecca-pic, body.kat img#kat-pic {
             opacity: 1;
         }
 
@@ -217,8 +217,8 @@
         body.rebecca .hero {
             background-color: var(--rebecca-accent);
         }
-        body.anie .hero {
-            background-color: var(--anie-accent);
+        body.kat .hero {
+            background-color: var(--kat-accent);
         }
         
         .description {
@@ -235,7 +235,7 @@
             display: none;
         }
         
-        body.tom #tom-info, body.rebecca #rebecca-info, body.anie #anie-info, body.nobody #nobody-info {
+        body.tom #tom-info, body.rebecca #rebecca-info, body.kat #kat-info, body.nobody #nobody-info {
             display: block;
         }
 
@@ -264,8 +264,8 @@
         </div>
         <div class="hero">
             <div class="alter-card">
-                <img src="anie.jpg" alt="Anie" id="anie-pic" class="alter-pic" onclick="setAlter('anie')">
-                <span>Anie</span>
+                <img src="kat.jpg" alt="Kat" id="kat-pic" class="alter-pic" onclick="setAlter('kat')">
+                <span>Kat</span>
             </div>
             <div class="alter-card">
                 <img src="rebecca.jpg" alt="Rebecca" id="rebecca-pic" class="alter-pic" onclick="setAlter('rebecca')">
@@ -280,8 +280,8 @@
             <div id="nobody-info" class="alter-info">
                 <p><em>tan lili, mi kama pona</em></p>
             </div>
-            <div id="anie-info" class="alter-info" class="alter-info">
-                <p>heya! i'm anie, she/her!</p>
+            <div id="kat-info" class="alter-info" class="alter-info">
+                <p>heya! i'm kat, she/her!</p>
 
                 <p>i'm young, enthusiastic, mindful, and spontaneous</p>
 
